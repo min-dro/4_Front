@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice2-2</title>
+    <style>
+        #result{ width: 97%; height: 40px;}
+        
+        /* td {display: inline-block;} */
+        button{ width: 100%; height: 25px;}
+        
+    </style>
+</head>
+<body>
+    <table border="1" class="style">
+        <thead>
+            <tr>
+                <th colspan="4"><input type="text" id="result"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                    <td><button onclick="Calc('C')">C</button></td>
+                    <td><button onclick="Calc('bs')">bs</button></td>
+                    <td><button onclick="Calc('%')">%</button></td>
+                    <td><button onclick="Calc('/')">/</button></td>
+            </tr>
+            <tr>
+                    <td><button onclick="Calc(7)">7</button></td>
+                    <td><button onclick="Calc(8)">8</button></td>
+                    <td><button onclick="Calc(9)">9</button></td>
+                    <td><button onclick="Calc('*')">X</button></td>
+            </tr>
+            <tr>
+                    <td><button onclick="Calc(4)">4</button></td>
+                    <td><button onclick="Calc(5)">5</button></td>
+                    <td><button onclick="Calc(6)">6</button></td>
+                    <td><button onclick="Calc('-')">-</button></td>
+            </tr>
+            <tr>
+                    <td><button onclick="Calc(1)">1</button></td>
+                    <td><button onclick="Calc(2)">2</button></td>
+                    <td><button onclick="Calc(3)">3</button></td>
+                    <td><button onclick="Calc('+')">+</button></td>
+            </tr>
+            <tr>
+                    <td colspan="2"><button onclick="Calc(0)">0</button></td>
+                    <td><button onclick="Calc('.')">.</button></td>
+                    <td><button onclick="Calc('=')">=</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function Calc(value) {
+            if(value == "C"){
+                document.getElementById("result").value = "";
+            } else if(value == "=") {
+                
+               var result = eval(document.getElementById("result").value);
+               document.getElementById("result").value = result;
+            } else {
+                document.getElementById("result").value += value;
+            }
+        }
+    </script>
+</body>
+</html>

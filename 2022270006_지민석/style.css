@@ -1,0 +1,10 @@
+* { color:rgb(12, 6, 90);}
+h1:hover{ color: aqua;}
+h1:active{ color:blue}
+input:enabled{ background-color: rgb(177, 223, 150);}
+input:focus{ background-color: orange;}
+li:first-child > a{ color: green;}
+p:nth-child(1){ font-size: 50%;}
+body{
+    background-image: url('monun.jpg');
+}

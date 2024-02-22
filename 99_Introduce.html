@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기 소개 - 지민석</title>
+    <style>
+        header div { margin: 0 auto; text-align: center; width: 500px; height: 100px; background-color:  rgb(206, 19, 231); color: rgb(57, 21, 92);}
+        header div h1 {top: 50%;}
+        nav {  background: #1f1e33; padding: 0px 7px; border: 1px solid #a3a3a3; border-radius: 10px; }
+        nav ul { display: flex; justify-content: right; }
+        nav ul li { float:left; padding-right: 10px; list-style: none; }
+        
+        nav ul li a { padding: 20px;
+                      text-decoration: none; /* 텍스트 밑줄 제거를 위해 사용 */
+                      color: white; }      /* 폰트 색 변경 */
+        nav ul li a:hover { background: white; color: #1f1e33; }
+        .code {
+            background: white; color: #1f1e33;border-radius: 25px;
+        }
+        .code:hover {
+            background-color: #1f1e33; color: white;
+            border: 1px solid white;
+            transition: 0.2s ease-out;
+        }
+        table, td, th{border: 1px solid black; border-collapse:  collapse;}
+        td, th{padding: 10px;}
+        thead {background-color: #eee;}
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1><strong>자기소개</strong></h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about" id="about"><b>About</b></a></li>
+            <li><a href="#project" id="project"><b>Project</b></a></li>
+            <li><a href="#contant" id="contant"><b>Contant</b></a></li>
+            <li><a href="https://github.com/min-dro/min-dro.github.io" id="code" class="code"><b>code</b></a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>소개</section>
+        반에서 제일 막내이지만 코딩 좀 치는 <em>지민석</em>입니다
+        <section>미니프로젝트</section>
+        <h2>택택토(Tictactoe)</h2>
+        <table>
+            <caption>Tictactoe</caption>
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>COLUMN_NAME</th>
+                    <th>CATA_TYPE</th>
+                    <th>NULLABLE</th>
+                    <th>DATA_DEFAULT</th>
+                    <th>COLUMN_ID</th>
+                    <th>COMMENTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>USERNO</td>
+                    <td>NUMBER</td>
+                    <td>No</td>
+                    <td>(null)</td>
+                    <td>1</td>
+                    <td>(null)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>USERNAME</td>
+                    <td>VARCHAR2 (50 BYTE)</td>
+                    <td>No</td>
+                    <td>(null)</td>
+                    <td>2</td>
+                    <td>(null)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>UVUSCORE</td>
+                    <td>NUMBER</td>
+                    <td>No</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>(null)</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>UVCSCORE</td>
+                    <td>NUMBER</td>
+                    <td>No</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>(null)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>NVNSCORE</td>
+                    <td>NUMBER</td>
+                    <td>No</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>(null)</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>010-8895-3621</p>
+    </footer>
+        <h3>안녕하십니까.</h3>
+        <hr>
+    <p align="center">
+        <b>제 이름은 지민석입니다.</b><br>
+        저는 <strong>오산대학교</strong>를 다니다가 왔습니다.<br>
+        가장 좋아하는 게임 장르는 <mark>리듬게임</mark>입니다.<br>
+        가장 좋아하는 음악 장르는 <u>하드코어</u>입니다.
+    </p>
+    대학교에서 배운것
+    <ul>
+        <li>Python</li>
+        <li>Unity 2D/3D</li>
+        <li>C++</li>
+        <li>linkage</li>
+        <li>AUTOCAD 2D</li>
+        <li>Arduino</li>
+        <li>linux</li>
+        <li>CSS3</li>
+        <li>C</li>
+        <li>ORACLE</li>
+        <li>EXCEL</li>
+        <li>JAVA</li>
+        <li>ANDROID STUDIO DOLPIN</li>
+        <li>HTML5</li>
+        <li>PHP</li>
+        <li>MYSQL</li>
+    </ul>
+    <h2>Member</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>USERNO</th>
+                <th>USERID</th>
+                <th>USERPW</th>
+                <th>USERNAME</th>
+                <th>GENDER</th>
+                <th>AGE</th>
+                <th>EMAIL</th>
+                <th>PHONE</th>
+                <th>ADDRESS</th>
+                <th>HOBBY</th>
+                <th>ENROLLDATE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>user1</td>
+                <td>pass1</td>
+                <td>홍길동</td>
+                <td>남</td>
+                <td>25</td>
+                <td>hong@gmail.com</td>
+                <td>01012345678</td>
+                <td>강남</td>
+                <td>독서</td>
+                <td>24/02/07</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="board">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="./00_HTML_Basic.html" target="_blank">HTML 메모</a></td>
+                <td>지민석</td>
+                <td>2024-02-13</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
