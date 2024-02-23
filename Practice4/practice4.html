@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        .area { border: 1px solid black;
+            width: 410px;
+            height: 150px;}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <legend>구매 정보</legend>
+            <ul>
+                <li>구매자 : <input type="text" name="name" id="name"/></li>
+                <li>상품명 : <input type="text" name="item" id="item" /></li>
+                <li>가격 : <input type="number" name="price" id="price" /></li>
+                <li>구매 수량 : <input type="number" name="len" id="len" mi="10" max="100" step="10"/></li>
+                <li>납품 등급 : <input type="range" name="grade" id="grade" min="1" max="9" step="2" /></li>
+                <li>기타 사항 : <textarea name="etc" id="etc" cols="35" rows="7"></textarea></li>
+            </ul>
+        </fieldset>
+    </form>
+    <br>
+    <button onclick="output()">입력 값 출력하기</button>
+    <br>
+    <div class="area" id="result"></div>
+    <script>
+        function output() {
+            const result = document.getElementById('result');
+            const name = document.getElementById('name').value;
+            const item = document.getElementById('item').value;
+            const price = document.getElementById('price').value;
+            const len = document.getElementById('len').value;
+            const grade = document.getElementById('grade').value;
+            const etc = document.getElementById('etc').value;
+            const regexp = /^[10-100] 0$/;
+            if(!regexp.test(len)){
+                result.innerHTML += "구매자 명 : " + name + "<br>";
+                result.innerHTML += "상품 명 : " + item + "<br>";
+                result.innerHTML += "가격 : " + price + "만원 <br>";
+                result.innerHTML += "구매 수량 : " + len + "개 <br>";
+                result.innerHTML += "납품 등급 : " + grade + "등급 <br>";
+                result.innerHTML += "기타 사항 : " + etc + "<br>";
+            } else {
+                alert("유효한 구매 수량이 아닙니다.")
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
