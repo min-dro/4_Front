@@ -57,10 +57,21 @@
             if(value == "C"){
                 v.value = "";
             } else if(value == "bs"){
-                v.value = v.slice(0, v.length-1);
+                v.value = v.value.slice(0, v.value.length-1);
             } else if(value == "=") {
                var result = eval(v.value);
-              v.value = result;
+               v.value = result;
+               if(value != "="){
+                v.value = ""
+                v.value += value;
+               } 
+            } else if(value == "+" ||value == "-" ||value == "*" ||value == "/" ||value == "%"){
+                if((v.value.charAt(v.value.length-2)=="+"||v.value.charAt(v.value.length-2)=="-"||v.value.charAt(v.value.length-2)=="*"||v.value.charAt(v.value.length-2) =="/"||v.value.charAt(v.value.length-2)=="%")&&(v.value.charAt(v.value.length-1)=="+"||v.value.charAt(v.value.length-1)=="-"||v.value.charAt(v.value.length-1)=="*"||v.value.charAt(v.value.length-1) =="/"||v.value.charAt(v.value.length-1)=="%")){
+                    alert("계산할 수 없습니다. 식을 완성시켜 주세요.");
+                    return false;
+                } else {
+                    v.value += value;
+                }
             } else {
                 v.value += value;
             }

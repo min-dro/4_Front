@@ -59,5 +59,128 @@
             $("#area1").append("<h5>one 메소드를 사용하여 추가</h5>");
         });
     </script>
+    <hr>
+    <h2>시각적인 효과를 보여주는 메소드(Effect Method)</h2>
+    <p>
+        페이지 내에 에니메이션 효과를 주기 위해 사용되는 메소드
+    </p>
+    <table border="1">
+        <tr>
+            <th>메소드명</th>
+            <th>기능 설명</th>
+        </tr>
+        <tr>
+            <td>show()</td>
+            <td rowspan="3">
+                선택된 요소가 점점 커지면서 보여주고,
+                점점 작아지면서 사라지게 만드는 메소드<br>
+                * toggle: show와 hide를 번갈아가면서 동작
+            </td>
+        </tr>
+        <tr>
+            <td>hide()</td>
+        </tr>
+        <tr>
+            <td>toggle()</td>
+        </tr>
+        <tr>
+            <td>fadeIn()</td>
+            <td rowspan="3">
+                선택된 요소가 점점 투명해지면서 사라지거나,
+                점점 선명해지면서 보여지게 만드는 메소드
+            </td>
+        </tr>
+        <tr>
+            <td>fadeOut()</td>
+        </tr>
+        <tr>
+            <td>fadeToggle()</td>
+        </tr>
+        <tr>
+            <td>slideDown()</td>
+            <td rowspan="3">
+                선택된 요소가 슬라이드 효과와 함께
+                사라지거나 보여지게 만드는 메소드
+            </td>
+        </tr>
+        <tr>
+            <td>slideUp()</td>
+        </tr>
+        <tr>
+            <td>slideToggle()</td>
+        </tr>
+    </table>
+    <br>
+    <h3>* show() hide() toggle()</h3>
+    <p>
+        * option : 효과에 대한 지속시간 (default: 400) <br>
+        - "slow" : 200, "fast" : 600
+    </p>
+    <button id="btn-show">보기</button>
+    <button id="btn-hide">숨기기</button>
+    <button id="btn-toggle">토글</button>
+    <br>
+    <img id="img01" width="300" src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg" alt="불러오기 실패">
+    <script>
+        // 보기 버튼 클릭 시 이미지를 보여지도록 처리
+        $("#btn-show").click(function(){
+            $("#img01").show('slow');
+        });
+        // 숨기기 버튼 클릭 시 이미지를 사라지도록 처리
+        $("#btn-hide").click(function(){
+            $("#img01").hide('slow');
+        });
+
+        // 토글 버튼 클릭 시 이미지가 보여졌다가 사라졌다가 되도록 처리
+        $("#btn-toggle").click(function(){
+            $("#img01").toggle('fast');
+        });
+    </script>
+    <br>
+    <br>
+    <h3>* fadeIn() fadeOut() fadeToggle()</h3>
+    <button id="btn-fin">보기</button>
+    <button id="btn-fout">숨기기</button>
+    <button id="btn-ftoggle">토글</button>
+    <br>
+    <img id="img02" width="300" src="https://media.istockphoto.com/id/1470710940/ko/%EC%82%AC%EC%A7%84/%ED%9D%B0%EC%83%89-%EB%B0%94%ED%83%95%EC%97%90-%EC%95%84%EB%A6%84-%EB%8B%A4%EC%9A%B4-%EC%96%BC%EB%A3%A9-%EA%B3%A0%EC%96%91%EC%9D%B4.jpg?s=2048x2048&w=is&k=20&c=k3JOZES3LF1zP5K-krGgJ0hw4fduWhhl4DV6-4ddjCg=" alt="불러오기 실패">
+    <script>
+    // 보기 버튼 클릭 시 이미지를 점점 선명해지면서 보여지도록 처리
+    $("#btn-fin").click(function(){
+        $("#img02").fadeIn();
+    });
+
+    // 숨기기 버튼 클릭 시 이미지를 점점 투명해지면서 사라지도록 처리
+    $("#btn-fout").click(function(){
+        $("#img02").fadeOut();
+    });
+    // 토글 버튼 클릭 시 위의 효과를 번갈아가면서 동작되도록 처리
+    $("#btn-ftoggle").click(function(){
+        $("#img02").fadeToggle();
+    });
+    </script>
+    <br>
+    <br>
+    <h3>* slideDown() slideUp() slideToggle()</h3>
+    <button id="btn-sdown">보기</button>
+    <button id="btn-sup">숨기기</button>
+    <button id="btn-stoggle">토글</button>
+    <div id="area4" style="border: 3px solid brown; height:200px; background-color: royalblue;"></div>
+    <script>
+        // 보기 버튼 클릭 시 div 영역을 슬라이드 효과와 함께 보여지도록 처리
+        $("#btn-sdown").click(function(){
+            $("#area4").slideDown();
+        });
+        // 숨기기 버튼 클릭 시 div 영역을 슬라이드 효과와 함께 사라지도록 처리
+        $("#btn-sup").click(function(){
+            $("#area4").slideUp();
+        });
+        // 토글 버튼 클릭 시 위의 두 효과를 번갈아가며 처리
+        $("#btn-stoggle").click(function(){
+            $("#area4").slideToggle();
+        });
+    </script>
+
+
 </body>
 </html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const name = prompt('이름을 입력하세요');
+        let range = /^[ㄱ-ㅎ가-힣] {2,}$/;
+        if(range.test(name)){
+            alert("안녕하세요" + name + "님 반갑습니다")
+        } else {
+            alert("잘못 입력하셨습니다.")
+        }
+    </script>
+</body>
+</html>
