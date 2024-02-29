@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #calculator {
+      width: 300px;
+      margin: 50px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: right;
+      font-size: 20px;
+    }
+
+    button {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="calculator">
+    <div id="display">0</div>
+    <button onclick="clearAll()">C</button>
+    <button onclick="backspace()">BS</button>
+    <button onclick="appendCharacter('7')">7</button>
+    <button onclick="appendCharacter('8')">8</button>
+    <button onclick="appendCharacter('9')">9</button>
+    <button onclick="appendOperator('/')">/</button>
+    <button onclick="appendCharacter('4')">4</button>
+    <button onclick="appendCharacter('5')">5</button>
+    <button onclick="appendCharacter('6')">6</button>
+    <button onclick="appendOperator('*')">*</button>
+    <button onclick="appendCharacter('1')">1</button>
+    <button onclick="appendCharacter('2')">2</button>
+    <button onclick="appendCharacter('3')">3</button>
+    <button onclick="appendOperator('-')">-</button>
+    <button onclick="appendCharacter('0')">0</button>
+    <button onclick="appendOperator('.')">.</button>
+    <button onclick="calculateResult()">=</button>
+    <button onclick="appendOperator('+')">+</button>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    let expression = '';
+
+    function clearAll() {
+      expression = '';
+      updateDisplay();
+    }
+
+    function backspace() {
+      expression = expression.slice(0, -1);
+      updateDisplay();
+    }
+
+    function appendCharacter(char) {
+      expression += char;
+      updateDisplay();
+    }
+
+    function appendOperator(operator) {
+      const lastChar = expression.slice(-1);
+
+      if (lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') {
+        alert("한 번에 연산자가 두 개 붙을 수 없습니다.");
+      } else if (expression === '' && (operator === '*' || operator === '/' || operator === '%')) {
+        alert("처음은 연산자가 나올 수 없습니다.");
+      } else {
+        expression += operator;
+        updateDisplay();
+      }
+    }
+
+    function calculateResult() {
+      try {
+        expression = eval(expression).toString();
+        updateDisplay();
+      } catch (error) {
+        alert("계산할 수 없습니다. 식을 완성시켜 주세요.");
+      }
+    }
+
+    function updateDisplay() {
+      display.textContent = expression;
+    }
+  </script>
+</body>
+</html>
