@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracitce1</title>
+    <link rel="stylesheet" href="css/practice1.css">
+    <script src="js/practice1.js"></script>
+</head>
+
+<body>
+    <h2>Practice1</h2>
+    <form>
+        <fieldset>
+            <legend>취미</legend>
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="all" name="hobby" onchange="changeAll()" value="전체선택" />
+                        <label for="all">전체선택</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="total" name="hobby" onchange="changeChkHobby()" value="종합" />
+                        <label for="total">종합</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="novel" name="hobby" onchange="changeChkHobby()" value="소설" />
+                        <label for="novel">소설</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="poem-essay" name="hobby" onchange="changeChkHobby()" value="시/에세이" />
+                        <label for="poem-essay">시/에세이</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="economy-manage" value="경제/경영" />
+                        <label for="economy-manage">경제/경영</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="self-develop" value="자기계발">
+                        <label for="self-develop">자기계발</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="child" value="아동">
+                        <label for="child">아동</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="travel" value="여행">
+                        <label for="travel">여행</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="science" value="과학">
+                        <label for="science">과학</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="history-culture" value="역사/문화">
+                        <label for="history-culture">역사/문화</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="foreign-lang" value="외국어">
+                        <label for="foreign-lang">외국어</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="computer" value="컴퓨터">
+                        <label for="computer">컴퓨터</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="hobby" onchange="changeChkHobby()" id="comic-book" value="만화">
+                        <label for="comic-book">만화</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <br>
+    <button onclick="checkedResult()">카테고리 선택</button>
+    <div id="result"></div>
+    <script>
+        function checkedResult() {
+        let result = document.getElementById("result");
+
+        let categoty = document.getElementById("total").value + document.getElementById("novel").value;
+        }
+        function changeChkHobby() {
+                const total = document.getElementById("total");
+                const novel = document.getElementById("novel");
+                const poem_essay = document.getElementById("poem-essay");
+                const economy_manage = document.getElementById("economy-manage");
+                const self_develop = document.getElementById("self-develop");
+                const child = document.getElementById("child");
+                const travel = document.getElementById("travel");
+                const science = document.getElementById("science");
+                const history_culture = document.getElementById("history-culture");
+                document.getElementById("foreign-lang").checked = true;
+                document.getElementById("computer").checked = true;
+                document.getElementById("comic-book").checked = true;
+            if (document.getElementById("all").checked == true){
+                document.getElementById("total").checked = true;
+                document.getElementById("novel").checked = true;
+                document.getElementById("poem-essay").checked = true;
+                document.getElementById("economy-manage").checked = true;
+                document.getElementById("self-develop").checked = true;
+                document.getElementById("child").checked = true;
+                document.getElementById("travel").checked = true;
+                document.getElementById("science").checked = true;
+                document.getElementById("history-culture").checked = true;
+                document.getElementById("foreign-lang").checked = true;
+                document.getElementById("computer").checked = true;
+                document.getElementById("comic-book").checked = true;
+            } else {
+                document.getElementById("total").checked = false;
+                document.getElementById("novel").checked = false;
+                document.getElementById("poem-essay").checked = false;
+                document.getElementById("economy-manage").checked = false;
+                document.getElementById("self-develop").checked = false;
+                document.getElementById("child").checked = false;
+                document.getElementById("travel").checked = false;
+                document.getElementById("science").checked = false;
+                document.getElementById("history-culture").checked = false;
+                document.getElementById("foreign-lang").checked = false;
+                document.getElementById("computer").checked = false;
+                document.getElementById("comic-book").checked = false;
+            }
+
+            if(document.getElementById("total").checked) {
+
+            }
+        }
+    </script>
+</body>
+
+</html>

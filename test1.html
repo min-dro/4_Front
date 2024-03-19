@@ -6,12 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    <div onclick="div_click()"> 테스트 대상 </div>
+    <input onclick="input_click()"> 테스트 대상 </input>
     <script>
-        window.onload = function() {
-            const Animal =
-            const dog1 = new Animal("밀크","푸들",8,5);
-            console.log(dog1);
+        function div_click(){
+            alert("div 클릭");
         }
-    </script>
+        
+        function div_click(){
+            alert("input 클릭");
+        }
+        </script>
 </body>
 </html>
